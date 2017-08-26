@@ -1,0 +1,14 @@
+h1 {
+    font-family: 'Playfair Display SC', serif;
+    color: white;
+}
+
+.jumbotron {
+    background-color: #070756;
+    color: white;
+}
+
+.panel-default>.panel-heading {
+    background-color: #070756;
+    color: white;
+}

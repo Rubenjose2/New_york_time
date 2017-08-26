@@ -5,11 +5,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
     <title>New York Time Searcher</title>
 </head>
 
 <body>
+    <div class="container">
 
+        <div class="jumbotron">
+            <div class="container text-center">
+                <h1>New York Times Search</h1>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">Search Parameters</div>
+            <div class="panel-body">
+
+                <form>
+                    <div class="form-group">
+                        <label for="">Search Tearm</label>
+                        <input type="text" class="form-control" id="search">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Numbers of Records Retrieve</label>
+                        <select id="selection" class="form-control">
+                        <option value="1">1</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                    </select>
+                    </div>
+                    <!-- Year Start Optional -->
+                    <div class="form-group">
+                        <label for="">Starting Year</label>
+                        <input type="text" class="form-control" id="start">
+                    </div>
+                    <!-- Yeard End Optional -->
+                    <div class="form-group">
+                        <label for="">Ending Year</label>
+                        <input type="text" class="form-control" id="end">
+                    </div>
+
+
+
+                    <button type="button" id="submmit" class="btn btn-primary">Submit</button>
+
+                    <button type="button" id="clear" class="btn btn-danger">clear</button>
+
+
+                </form>
+
+            </div>
+
+
+
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">Top Results</div>
+            <div id="results" class="panel-body">
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <!-- <script src="assets/javascript/app.js"></script> -->
+    <script type="text/javascript">
+        $("button").on("click", function(event) {
+            event.preventDefault();
+            var input = $("#search").val();
+            console.log(input);
+            var multi = $("#selection").val();
+            console.log(multi);
+
+        });
+    </script>
 </body>
 
 </html>
